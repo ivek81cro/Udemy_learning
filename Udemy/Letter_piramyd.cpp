@@ -4,7 +4,8 @@
 
 using namespace std;
 
-void PrintPyramid(string &s) {
+void PrintPyramid(string &s) 
+{
 
 	if (s.empty()) {
 		return;
@@ -16,17 +17,20 @@ void PrintPyramid(string &s) {
 	{
 		//ident
 		int ident = s.length() - charsToPrint;
-		for (int i = 0; i < ident; i++) {
+		for (int i = 0; i < ident; i++) 
+		{
 			cout << " ";
 		}
 
 		// forward
-		for (int i = 0; i < charsToPrint; i++) {
+		for (int i = 0; i < charsToPrint; i++) 
+		{
 			cout << s[i];
 		}
 
 		// backward
-		for (int i = charsToPrint - 2; i >= 0; i--) {
+		for (int i = charsToPrint - 2; i >= 0; i--) 
+		{
 			cout << s[i];
 		}
 
@@ -48,11 +52,13 @@ int main()
 	while (current_chars <= str.length())
 	{
 		int pos = str.length() - current_chars;
-		for (int i = 0; i < pos; i++) {
+		for (int i = 0; i < pos; i++) 
+		{
 			cout << " ";
 		}
 
-		for (int i = 0; i < current_chars; i++) {
+		for (int i = 0; i < current_chars; i++) 
+		{
 			cout << str[i];
 		}
 
