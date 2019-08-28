@@ -7,7 +7,8 @@ using namespace std;
 void PrintPyramid(string &s) 
 {
 
-	if (s.empty()) {
+	if (s.empty()) 
+	{
 		return;
 	}
 
