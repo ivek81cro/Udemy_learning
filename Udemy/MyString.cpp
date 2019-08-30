@@ -29,6 +29,28 @@ MyString::MyString(const MyString &src):str{nullptr}
 	std::strcpy(str, src.str);
 }
 
+//move constructor
+MyString::MyString(MyString &&source):str(source.str)
+{
+	source.str = nullptr;
+	std::cout << "Move constr used" << std::endl;
+}
+
+//Move accignment
+MyString &MyString::operator=(MyString &&rhs)
+{
+	std::cout << "Move assignment used" << std::endl;
+	if (this == &rhs)
+		return *this;
+
+	delete[] str;
+
+	str = rhs.str;
+	rhs.str = nullptr;
+
+	return *this;
+}
+
 //destr
 MyString::~MyString()
 {

@@ -9,9 +9,12 @@ public:
 	MyString();
 	MyString(const char *s);
 	MyString(const MyString &src);
+	MyString(MyString &&source);//move constructor
 	~MyString();
 
-	MyString &operator=(const MyString &rhs);
+	MyString &operator=(const MyString &rhs);//copy assigment
+	MyString &operator=(MyString &&rhs);//Move assignment
+
 
 	void display()const;
 
