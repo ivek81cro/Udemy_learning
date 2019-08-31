@@ -87,3 +87,17 @@ const char *MyString::get_str()const
 {
 	return str;
 }
+
+std::ostream& operator<<(std::ostream& os, const MyString &rhs)
+{
+	return os << rhs.str;
+}
+
+std::istream& operator>>(std::istream& is, MyString &rhs)
+{
+	char *buff=new char[1000];
+	is >> buff;
+	rhs = MyString{ buff };
+	delete[] buff;
+	return is;
+}

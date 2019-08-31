@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dog.h" />
     <ClInclude Include="MyString.h" />
   </ItemGroup>
   <ItemGroup>

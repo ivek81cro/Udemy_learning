@@ -4,45 +4,12 @@
 
 int main()
 {
-	MyString a{ "Hello" };
-	MyString b;
-	b = a;
-
-	b = "This is a test";
-
-	MyString empty;
 	MyString larry{ "Larry" };
-	MyString stooge{ larry };
-	MyString stooges;
+	MyString moe{ "Moe" };
+	MyString curly;
 
-	empty = stooge;
+	std::cout << "Enter first stooge name" << std::endl;
+	std::cin >> curly;
 
-	empty.display();
-	larry.display();
-	stooge.display();
-	empty.display();
-
-	stooges = "Larry, Moe and Curly";
-	stooges.display();
-
-	std::vector<MyString> stooges_vec;
-	stooges_vec.push_back("Larry");
-	stooges_vec.push_back("Moe");
-	stooges_vec.push_back("Curly");
-
-	std::cout << "===LOOP1=======================" << std::endl;
-
-	for (const MyString &s : stooges_vec)
-		s.display();
-
-	std::cout << "===LOOP2=======================" << std::endl;
-
-	for (MyString &s : stooges_vec)
-		s = "Changed";
-
-	std::cout << "===LOOP3=======================" << std::endl;
-
-	for (MyString &s : stooges_vec)
-		s.display();
-
+	std::cout << larry << ',' << moe << ',' << curly << std::endl;
 }

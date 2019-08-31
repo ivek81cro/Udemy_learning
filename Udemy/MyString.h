@@ -1,8 +1,9 @@
 #ifndef _MYSTR_H_
 #define _MYSTR_H_
+#include<iostream>
 
 class MyString
-{
+{	
 private:
 	char *str;
 public:
@@ -14,6 +15,9 @@ public:
 
 	MyString &operator=(const MyString &rhs);//copy assigment
 	MyString &operator=(MyString &&rhs);//Move assignment
+	
+	friend std::ostream& operator<<(std::ostream& os, const MyString &rhs);
+	friend std::istream& operator>>(std::istream& is, MyString &rhs);
 
 
 	void display()const;
