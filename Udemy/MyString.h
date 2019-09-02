@@ -22,7 +22,7 @@ public:
 
 	void display()const;
 
-	int get_length()const;
+	size_t get_length()const;
 	const char *get_str()const;
 };
 

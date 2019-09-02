@@ -78,7 +78,7 @@ void MyString::display()const
 }
 
 //getters
-int MyString::get_length()const
+size_t MyString::get_length()const
 {
 	return strlen(str);
 }
