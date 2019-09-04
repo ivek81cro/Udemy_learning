@@ -13,7 +13,7 @@ public:
 	MyString(MyString &&source);//move constructor
 	~MyString();
 
-	MyString &operator=(const MyString &rhs);//copy assigment
+	MyString &operator=(const MyString &rhs);//copy assignment
 	MyString &operator=(MyString &&rhs);//Move assignment
 	
 	friend std::ostream& operator<<(std::ostream& os, const MyString &rhs);

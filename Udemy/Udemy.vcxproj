@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyString.h" />
+    <ClInclude Include="Account\Account.h" />
+    <ClInclude Include="Account\Savings_Account.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyString.cpp" />
-    <ClCompile Include="Overload_Assigment_operator.cpp" />
+    <ClCompile Include="Account\Account.cpp" />
+    <ClCompile Include="Account\Savings_Account.cpp" />
+    <ClCompile Include="Account\Source_Account.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

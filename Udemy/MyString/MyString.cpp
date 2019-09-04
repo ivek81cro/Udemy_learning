@@ -60,7 +60,7 @@ MyString::~MyString()
 //copy
 MyString &MyString::operator=(const MyString &rhs)
 {
-	std::cout << "Copy assigment" << std::endl;
+	std::cout << "Copy assignment" << std::endl;
 	if (this == &rhs)
 		return *this;
 
