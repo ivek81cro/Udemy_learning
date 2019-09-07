@@ -2,11 +2,14 @@
 #include<iostream>
 
 
-Savings_Account::Savings_Account():intrest_rate{3.0}
+Savings_Account::Savings_Account():Savings_Account(0.0,0.0)
 {
-
 }
 
+Savings_Account::Savings_Account(double balance, double intrest_rate)
+	:Account(balance),int_rate(intrest_rate)
+{
+}
 
 Savings_Account::~Savings_Account()
 {
@@ -14,10 +17,11 @@ Savings_Account::~Savings_Account()
 
 void Savings_Account::deposit(double ammount)
 {
-	std::cout << "Savings called with ammount of: " << ammount << std::endl;
+	ammount += ammount * int_rate/100;
+	Account::deposit(ammount);
 }
 
-void Savings_Account::withdraw(double ammount)
+std::ostream& operator<<(std::ostream& os, const Savings_Account& sa)
 {
-	std::cout << "Savings called with ammount of: " << ammount << std::endl;
+	return os << "Savings account balance:" << sa.balance << " Intrest rate:" << sa.int_rate;
 }

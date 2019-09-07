@@ -1,32 +1,31 @@
-#include"Account.h"
 #include"Savings_Account.h"
 #include<iostream>
 
 int main()
 {
-	std::cout << "\n=============Account======================" << std::endl;
-	Account acc{};
-	acc.deposit(2000.0);
-	acc.withdraw(500.0);
+	Account a1{ 1000.0 };
+	std::cout << a1 << std::endl;
 
-	std::cout << std::endl;
+	a1.deposit(500.0);
+	std::cout << a1 << std::endl;
 
-	Account *p_acc{ nullptr };
-	p_acc = new Account();
-	p_acc->deposit(1000.0);
-	p_acc->withdraw(500.0);
-	delete p_acc;
+	a1.withdraw(1000.0);
+	std::cout << a1 << std::endl;
 
-	std::cout << "\n=============Savings_Account======================" << std::endl;
-	Savings_Account sacc{};
-	sacc.deposit(2000.0);
-	sacc.withdraw(500.0);
-	
-	std::cout << std::endl;
+	a1.withdraw(2000.0);
+	std::cout << a1 << std::endl;
 
-	Savings_Account *p_sacc{ nullptr };
-	p_sacc = new Savings_Account();
-	p_sacc->deposit(3000.0);
-	p_sacc->withdraw(700.0);
-	delete p_sacc;
+	std::cout << "==========SAVINGS==============================" << std::endl;
+
+	Savings_Account s1{ 1000.0,5.0 };
+	std::cout << s1 << std::endl;
+
+	s1.deposit(1000.0);
+	std::cout << s1 << std::endl;
+
+	s1.withdraw(2000.0);
+	std::cout << s1 << std::endl;
+
+	s1.withdraw(1000.0);
+	std::cout << s1 << std::endl;
 }
