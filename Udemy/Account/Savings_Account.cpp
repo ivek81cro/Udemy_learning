@@ -7,7 +7,7 @@ Savings_Account::Savings_Account():Savings_Account(0.0,0.0)
 }
 
 Savings_Account::Savings_Account(double balance, double intrest_rate)
-	:Account(balance),int_rate(intrest_rate)
+	:Account("Savings account",balance),int_rate(intrest_rate)
 {
 }
 

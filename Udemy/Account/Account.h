@@ -6,12 +6,13 @@ class Account
 {
 	friend std::ostream& operator<<(std::ostream& os, const Account& acc);
 protected:
+	std::string name;
 	double balance;
 public:
-	void deposit(double ammount);
-	void withdraw(double ammount);
-	Account(double balance);
-	Account();
+	bool deposit(double ammount);
+	bool withdraw(double ammount);
+	Account(std::string name = "Unnamed account", double balance = 0.0);
+	double get_balance() const;
 	~Account();
 };
 

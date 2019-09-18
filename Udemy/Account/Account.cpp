@@ -1,34 +1,45 @@
 #include<iostream>
 #include "Account.h"
 
-Account::Account():Account(0.0)
-{
-}
-
-Account::Account(double balance) : balance(balance)
-{
-}
+Account::Account(std::string name, double balance ) 
+	: balance{ balance }, name{ name }
+{}
 
 Account::~Account()
+{}
+
+bool Account::deposit(double ammount)
 {
+	if (ammount < 0)
+	{
+		return false;
+	}
+	else 
+	{
+		balance += ammount;
+		return true;
+	}
 }
 
-void Account::deposit(double ammount)
+bool Account::withdraw(double ammount)
 {
-	std::cout << "Deposit called with ammount of: " << ammount << std::endl;
-	balance += ammount;
-}
-
-void Account::withdraw(double ammount)
-{
-	std::cout << "Withdraw called with ammount of: " << ammount << std::endl;
 	if (ammount > balance)
-		std::cout << "Insuficcient funds!" << std::endl;
+	{
+		return false;
+	}
 	else
+	{
 		balance -= ammount;
+		return true;
+	}
+}
+
+double Account::get_balance() const
+{
+	return balance;
 }
 
 std::ostream& operator<<(std::ostream& os, const Account& acc)
 {
-	return os << "Accoutn balance:" << acc.balance;
+	return os << "Account name:" << acc.name<< " || balance:" << acc.balance;
 }

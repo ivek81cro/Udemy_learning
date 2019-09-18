@@ -15,14 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Account\Account.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Account\Savings_Account.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="Account\Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -32,5 +24,19 @@
     <ClCompile Include="Account\Source_Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Account\Checking_Account.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Account\Account.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Account\Savings_Account.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Account\Checking_Account.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
