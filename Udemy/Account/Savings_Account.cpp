@@ -2,12 +2,12 @@
 #include<iostream>
 
 
-Savings_Account::Savings_Account():Savings_Account(0.0,0.0)
+Savings_Account::Savings_Account()
 {
 }
 
-Savings_Account::Savings_Account(double balance, double intrest_rate)
-	:Account("Savings account",balance),int_rate(intrest_rate)
+Savings_Account::Savings_Account(std::string name, double balance, double intrest_rate)
+	:Account(name,balance),int_rate(intrest_rate)
 {
 }
 
@@ -15,10 +15,11 @@ Savings_Account::~Savings_Account()
 {
 }
 
-void Savings_Account::deposit(double ammount)
+bool Savings_Account::deposit(double ammount)
 {
 	ammount += ammount * int_rate/100;
 	Account::deposit(ammount);
+	return true;
 }
 
 std::ostream& operator<<(std::ostream& os, const Savings_Account& sa)

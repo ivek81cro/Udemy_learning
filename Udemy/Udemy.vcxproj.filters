@@ -27,6 +27,9 @@
     <ClCompile Include="Account\Checking_Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Account\Trust_Account.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account\Account.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Account\Checking_Account.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Account\Trust_Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

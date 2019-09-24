@@ -12,7 +12,7 @@ Checking_Account::~Checking_Account()
 
 bool Checking_Account::withdraw(double ammount)
 {
-	ammount += fee;
+	ammount += _fee;
 	return Account::withdraw(ammount);
 }
 

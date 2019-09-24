@@ -8,9 +8,9 @@ class Savings_Account : public Account
 protected:
 	double int_rate;
 public:
-	void deposit(double ammount);
+	bool deposit(double ammount);
 	Savings_Account();
-	Savings_Account(double balance, double intrest_rate);
+	Savings_Account(std::string name="Savings account", double balance=0.0, double intrest_rate=0.0);
 	~Savings_Account();
 };
 

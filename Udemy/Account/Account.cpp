@@ -16,6 +16,7 @@ bool Account::deposit(double ammount)
 	}
 	else 
 	{
+		std::cout << "Deposit....." << ammount << std::endl;
 		balance += ammount;
 		return true;
 	}
@@ -25,10 +26,13 @@ bool Account::withdraw(double ammount)
 {
 	if (ammount > balance)
 	{
+		std::cout << "Withdraw....." << ammount 
+			<< "\nLimit exceeded" << std::endl;
 		return false;
 	}
 	else
 	{
+		std::cout << "Withdraw....." << ammount << std::endl;
 		balance -= ammount;
 		return true;
 	}
