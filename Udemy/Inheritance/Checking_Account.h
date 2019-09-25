@@ -4,11 +4,11 @@
 
 class Checking_Account : public Account
 {
-	friend std::ostream &operator<<(std::ostream& os, const Checking_Account& ca);
 private:
 	static constexpr const char *_name = "Checking account";
 	static constexpr double _fee = 1.5;
 public:
+	virtual void print(std::ostream& os) const override;
 	Checking_Account(std::string name=_name, double balance=0.0);
 	bool withdraw(double);
 	~Checking_Account();

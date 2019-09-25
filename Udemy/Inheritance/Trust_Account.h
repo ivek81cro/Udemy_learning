@@ -4,7 +4,6 @@
 
 class Trust_Account : public Savings_Account
 {
-	friend std::ostream& operator<<(std::ostream& os, const Trust_Account& acc);
 private:
 	static constexpr const char *k_name = "Trust account";
 	static constexpr double k_int_rate = 0.05;
@@ -15,12 +14,13 @@ private:
 protected:
 	int num_withdrawals;
 public:
+	virtual void print(std::ostream& os) const override;
 	Trust_Account(std::string name=k_name, double balance=0.0, double int_rate=k_int_rate);
 	~Trust_Account();
 
-	bool deposit(double ammount);
+	bool deposit(double amount);
 
-	bool withdraw(double ammount);
+	bool withdraw(double amount);
 };
 
 #endif // !_TRUST_ACCOUNT_
