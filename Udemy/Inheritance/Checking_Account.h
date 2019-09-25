@@ -10,8 +10,8 @@ private:
 public:
 	virtual void print(std::ostream& os) const override;
 	Checking_Account(std::string name=_name, double balance=0.0);
-	bool withdraw(double);
-	~Checking_Account();
+	virtual bool withdraw(double);
+	virtual ~Checking_Account();
 };
 
 #endif // !_CHECKING_ACCOUNT_H_

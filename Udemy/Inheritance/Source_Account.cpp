@@ -34,6 +34,16 @@ int main()
 	s1.withdraw(1000.0);
 	std::cout << s1 << std::endl;
 
+	Account *s2 = new Savings_Account{ "Marko", 1000, 5 };
+	s2->deposit(200);
+	std::cout << *s2 << std::endl;
+	s2->withdraw(1500);
+	std::cout << *s2 << std::endl;
+
+	delete s2;
+
+	std::cout << "=================CHECKING=======================" << std::endl;
+
 	Checking_Account c1{"Sper Mario",1000.0};
 	c1.withdraw(900.0);
 	std::cout << c1 << std::endl;

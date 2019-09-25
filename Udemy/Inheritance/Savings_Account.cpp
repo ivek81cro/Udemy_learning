@@ -17,7 +17,7 @@ Savings_Account::~Savings_Account()
 
 void Savings_Account::print(std::ostream& os) const
 {
-	os << "Savings account balance:" << balance << " Intrest rate:" << int_rate;
+	os << "Name:" << name << " balance:" << balance << " Intrest rate:" << int_rate;
 }
 
 bool Savings_Account::deposit(double amount)

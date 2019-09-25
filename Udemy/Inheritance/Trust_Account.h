@@ -16,11 +16,11 @@ protected:
 public:
 	virtual void print(std::ostream& os) const override;
 	Trust_Account(std::string name=k_name, double balance=0.0, double int_rate=k_int_rate);
-	~Trust_Account();
+	virtual ~Trust_Account();
 
 	bool deposit(double amount);
 
-	bool withdraw(double amount);
+	virtual bool withdraw(double amount);
 };
 
 #endif // !_TRUST_ACCOUNT_

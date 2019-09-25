@@ -8,10 +8,10 @@ protected:
 	double int_rate;
 public:
 	virtual void print(std::ostream& os) const override;
-	bool deposit(double amount);
+	virtual bool deposit(double amount);
 	Savings_Account();
 	Savings_Account(std::string name="Savings account", double balance=0.0, double intrest_rate=0.0);
-	~Savings_Account();
+	virtual ~Savings_Account();
 };
 
 #endif

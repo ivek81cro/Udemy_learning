@@ -15,11 +15,11 @@ protected:
 	double balance;
 public:
 	virtual void print(std::ostream& os) const override;
-	bool deposit(double amount);
-	bool withdraw(double amount);
+	virtual bool deposit(double amount);
+	virtual bool withdraw(double amount);
 	Account(std::string name = "Unnamed account", double balance = 0.0);
 	double get_balance() const;
-	~Account();
+	virtual ~Account();
 };
 
 #endif
