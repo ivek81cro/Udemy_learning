@@ -11,13 +11,10 @@ Savings_Account::Savings_Account(std::string name, double balance, double intres
 {
 }
 
-Savings_Account::~Savings_Account()
-{
-}
-
 void Savings_Account::print(std::ostream& os) const
 {
-	os << "Name:" << name << " balance:" << balance << " Intrest rate:" << int_rate;
+	os << "Name:" << name << " || balance:" << balance 
+		<< " || Intrest rate:" << int_rate << "%";
 }
 
 bool Savings_Account::deposit(double amount)
@@ -25,4 +22,9 @@ bool Savings_Account::deposit(double amount)
 	amount += amount * int_rate/100;
 	Account::deposit(amount);
 	return true;
+}
+
+bool Savings_Account::withdraw(double amount)
+{
+	return Account::withdraw(amount);
 }

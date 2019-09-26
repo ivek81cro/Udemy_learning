@@ -48,8 +48,3 @@ bool Account::withdraw(double amount)
 		return true;
 	}
 }
-
-double Account::get_balance() const
-{
-	return balance;
-}

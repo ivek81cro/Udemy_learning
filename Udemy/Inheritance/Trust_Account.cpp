@@ -3,17 +3,13 @@
 
 
 Trust_Account::Trust_Account(std::string name, double balance, double int_rate)
-	:Savings_Account(name,balance, k_int_rate),num_withdrawals{0}
-{
-}
-
-Trust_Account::~Trust_Account()
+	:Savings_Account(name,balance, int_rate/100.),num_withdrawals{0}
 {
 }
 
 void Trust_Account::print(std::ostream& os) const
 {
-	os << name << ": " << balance << ": " << int_rate << ": "
+	os << name << ": " << balance << ": " << int_rate*100 << "% : "
 		<< k_max_withdraw_perc * 100 << "% " << num_withdrawals << " withdrawals";
 }
 
