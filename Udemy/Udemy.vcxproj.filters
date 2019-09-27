@@ -15,33 +15,33 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Inheritance\Account.cpp">
+    <ClCompile Include="Smart_Pointers\Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Inheritance\Checking_Account.cpp">
+    <ClCompile Include="Smart_Pointers\Checking_Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Inheritance\Savings_Account.cpp">
+    <ClCompile Include="Smart_Pointers\Savings_Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Inheritance\Source_Account.cpp">
+    <ClCompile Include="Smart_Pointers\Trust_Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Inheritance\Trust_Account.cpp">
+    <ClCompile Include="Smart_Pointers\Source_pointers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Inheritance\Account.h">
+    <ClInclude Include="Smart_Pointers\Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inheritance\Checking_Account.h">
+    <ClInclude Include="Smart_Pointers\Checking_Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inheritance\Savings_Account.h">
+    <ClInclude Include="Smart_Pointers\Savings_Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Inheritance\Trust_Account.h">
+    <ClInclude Include="Smart_Pointers\Trust_Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
