@@ -24,10 +24,10 @@
     <ClCompile Include="Smart_Pointers\Savings_Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Smart_Pointers\Trust_Account.cpp">
+    <ClCompile Include="Smart_Pointers\Source_pointers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Smart_Pointers\Source_pointers.cpp">
+    <ClCompile Include="Smart_Pointers\Trust_Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

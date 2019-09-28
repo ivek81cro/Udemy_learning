@@ -36,7 +36,7 @@ MyString::MyString(MyString &&source):str(source.str)
 	std::cout << "Move constr used" << std::endl;
 }
 
-//Move accignment
+//Move assignment
 MyString &MyString::operator=(MyString &&rhs)
 {
 	std::cout << "Move assignment used" << std::endl;
