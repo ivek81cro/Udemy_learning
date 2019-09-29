@@ -6,7 +6,7 @@
 #include<memory>
 #include<iomanip>
 
-//std::unique_ptr<std::vector<std::shared_ptr<Account>>> -replaced by auto
+//std::unique_ptr<std::vector<std::shared_ptr<Account>>> -return type replaced by auto
 auto make()
 {
 	return std::make_unique<std::vector<std::shared_ptr<Account>>>();
@@ -16,11 +16,9 @@ void fill(std::vector<std::shared_ptr<Account>> &vec, int num)
 {
 	for (int i = 1; i <= num; ++i)
 	{
-		std::unique_ptr<Account> ptr = std::make_unique<Savings_Account>();
-		std::cout << "Enter deposit amount of savings account:";
-		double amount;
-		std::cin >> amount;
-		ptr->deposit(amount);
+		std::unique_ptr<Savings_Account> ptr = std::make_unique<Savings_Account>();
+		std::cout << "Enter data for savings account(name, amount, intrest rate):\n";
+		std::cin >> *ptr;
 		vec.push_back(std::move(ptr));
 	}
 }

@@ -4,6 +4,7 @@
 
 class Savings_Account : public Account
 {
+	friend std::istream& operator>>(std::istream& is, Savings_Account &sacc);
 protected:
 	double int_rate;
 public:

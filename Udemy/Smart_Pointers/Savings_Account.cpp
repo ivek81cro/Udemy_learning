@@ -23,3 +23,9 @@ bool Savings_Account::withdraw(double amount)
 {
 	return Account::withdraw(amount);
 }
+
+std::istream& operator>>(std::istream& is, Savings_Account &sa)
+{
+	is >> sa.name >> sa.balance >> sa.int_rate;
+	return is;
+}
