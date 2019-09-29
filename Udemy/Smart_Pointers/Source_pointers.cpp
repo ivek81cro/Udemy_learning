@@ -16,7 +16,7 @@ void fill(std::vector<std::shared_ptr<Account>> &vec, int num)
 {
 	for (int i = 1; i <= num; ++i)
 	{
-		std::unique_ptr<Savings_Account> ptr = std::make_unique<Savings_Account>();
+		auto ptr = std::make_unique<Savings_Account>();
 		std::cout << "Enter data for savings account(name, amount, intrest rate):\n";
 		std::cin >> *ptr;
 		vec.push_back(std::move(ptr));
