@@ -7,7 +7,6 @@ class Savings_Account : public Account
 protected:
 	double int_rate;
 public:
-	Savings_Account();
 	Savings_Account(std::string name="Savings account", double balance=0.0, double intrest_rate=0.0);
 	virtual ~Savings_Account()=default;
 

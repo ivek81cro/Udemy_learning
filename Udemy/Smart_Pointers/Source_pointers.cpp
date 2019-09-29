@@ -6,13 +6,41 @@
 #include<memory>
 #include<iomanip>
 
+//std::unique_ptr<std::vector<std::shared_ptr<Account>>> -replaced by auto
+auto make()
+{
+	return std::make_unique<std::vector<std::shared_ptr<Account>>>();
+}
+
+void fill(std::vector<std::shared_ptr<Account>> &vec, int num)
+{
+	for (int i = 1; i <= num; ++i)
+	{
+		std::unique_ptr<Account> ptr = std::make_unique<Savings_Account>();
+		std::cout << "Enter deposit amount of savings account:";
+		double amount;
+		std::cin >> amount;
+		ptr->deposit(amount);
+		vec.push_back(std::move(ptr));
+	}
+}
+
+void display(const std::vector<std::shared_ptr<Account>> &vec)
+{
+	std::cout << "Display vector data" << std::endl;
+	for (const auto &data : vec)
+	{
+		std::cout << *data << std::endl;
+	}
+}
+
 int main()
 {
 	std::cout << std::setprecision(2);
 	std::cout << std::fixed;
 	//UNIQUE POINTERS
 
-	std::unique_ptr<Account> ptr1 = std::make_unique<Trust_Account>("Thor");
+	/*std::unique_ptr<Account> ptr1 = std::make_unique<Trust_Account>("Thor");
 	ptr1->deposit(200);
 	std::cout << *ptr1 << std::endl;
 	auto ptr2 = std::make_unique<Savings_Account>("Bamby", 3800, 0.03);
@@ -37,7 +65,7 @@ int main()
 		acc->withdraw(3000);
 
 	for (const auto &acc : vAcc)
-		std::cout << *acc << std::endl;
+		std::cout << *acc << std::endl;*/
 
 	//SHARED POINTERS
 
@@ -62,4 +90,18 @@ int main()
 	}
 
 	std::cout << "ptr1 usage count: " << ptr1.use_count() << std::endl;*/
+
+	//CHALLENGE
+
+	std::unique_ptr<std::vector<std::shared_ptr<Account>>> vec_ptr;
+	vec_ptr = make();
+
+	std::cout << "How many accounts you want to make?";
+	int num;
+	std::cin >> num;
+
+	fill(*vec_ptr, num);
+
+	display(*vec_ptr);
+
 }
